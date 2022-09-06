@@ -1,5 +1,5 @@
 <template>
-  <nav> 
+  <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';"> 
     <ol class="breadcrumb">
       <li
         v-for="(crumb, index) in crumbs"
@@ -41,7 +41,13 @@ export default {
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.37rem;
-  display: inline-flex;
+  justify-content: center;
+  max-width: 40%;
+  width: 100%;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: none;
 }
 
 

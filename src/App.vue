@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      crumbs: ['Home', 'Category', 'Sub Category'],
+      crumbs: ['Admin','Category', 'Sub Category', 'Another'],
     }
   },
   methods: {
@@ -36,6 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 
 nav {
