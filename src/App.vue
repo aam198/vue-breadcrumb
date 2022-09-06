@@ -1,5 +1,5 @@
 <template>
-  <MainNav />
+  <BreadCrumb class="row justify-content-center mt-4" :crumbs="crumbs" @selected="selected" />
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -8,12 +8,22 @@
 </template>
 
 <script>
-import MainNav from '@/components/MainNav.vue'
+import BreadCrumb from '@/components/BreadCrumb.vue'
 
 export default {
   name: 'App',
   components: {
-    MainNav,
+    BreadCrumb,
+  },
+  data() {
+    return {
+      crumbs: ['Home', 'Category', 'Sub Category'],
+    }
+  },
+  methods: {
+    selected(crumb){
+      console.log(crumb);
+    }
   }
 }
 </script>
@@ -40,4 +50,5 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
 </style>
